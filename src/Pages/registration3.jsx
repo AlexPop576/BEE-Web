@@ -5,7 +5,7 @@ export function Registration3() {
     return (
         <div className="App">
             <ul>
-                <ul>Verificare identitate</ul>
+                <ul className='instructions'>Verificare identitate</ul>
                 <ul><Link to="/vote1">
                     <Button text="Continuă" />
                 </Link></ul>

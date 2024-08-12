@@ -12,6 +12,22 @@ body {
   pointer-events: none;
 }
 
+.instructions {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; /* or 700 since Roboto 700 is bold */
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
