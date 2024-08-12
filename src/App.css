@@ -27,9 +27,61 @@ body {
   margin: 20px 0;
 }
 
+.background-image {
+  position: absolute; /* Position it absolutely within the App container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background-image: url('./assets/startBackground.png'); /* Path to your image */
+  background-size: cover; /* Cover the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  z-index: -1; /* Send it behind other elements */
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.registration-container {
+  background-color: #f0f2fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.instructions {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #444;
+  text-align: center;
+}
+
+.cnp-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  text-align: center;
+  color: #333;
+  background-color: #f7f7f7;
+  margin-bottom: 20px;
+}
+
+.cnp-input:focus {
+  outline: none;
+  border-color: #ffd238;
+}
+
+.button-link {
+  text-decoration: none;
 }

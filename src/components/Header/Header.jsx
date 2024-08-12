@@ -4,7 +4,7 @@ import './Header.css';
 export default function Header() {
     return (
         <header>
-            <img className='start-page-logo' src={logo} alt="logo"/>
+            <img id='start-page-logo' src={logo} alt="logo"/>
         </header>
     );
 }
