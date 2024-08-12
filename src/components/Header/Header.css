@@ -1,0 +1,7 @@
+.start-page-logo {
+    width: 100%; /* Makes the image responsive to its container's width */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 400px; /* Sets a maximum width */
+    border-radius: 10px; /* Optional: Rounds the corners of the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for a 3D effect */
+}
