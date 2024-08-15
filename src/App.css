@@ -40,6 +40,15 @@ body {
   z-index: -1; /* Send it behind other elements */
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  gap: 20px; /* Space between the widgets */
+  padding: 20px; /* Optional: padding around the grid */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

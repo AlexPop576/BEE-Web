@@ -5,5 +5,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px; /* Optional: if you want rounded corners */
+    border-radius: 25px; /* Optional: if you want rounded corners */
 }

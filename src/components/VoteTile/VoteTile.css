@@ -1,0 +1,26 @@
+.vote-tile {
+    width: 48vw;
+    height: 250px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#party {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

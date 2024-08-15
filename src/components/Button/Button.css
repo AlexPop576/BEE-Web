@@ -1,15 +1,17 @@
 #main-button {
-    width: 50vw;
+    width: 55vw;
     height: 9vh;
     background-color: #FFD700; /* Yellow color */
     color: white; /* White text */
     padding: 15px 270px; /* Padding inside the button */
     border: none; /* Remove default border */
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 25px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
     font-size: 38px; /* Font size */
     cursor: pointer; /* Pointer on hover */
     font-family: 'Roboto', sans-serif; 
     font-weight: bold; /* Bold text */
     transition: transform 0.1s ease-in-out; /* Transition for hover effect */
+    margin-bottom: 50px;
+    margin-top: 25px;
 }
