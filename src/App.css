@@ -49,7 +49,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
   gap: 20px; /* Space between the widgets */
-  padding: 20px; /* Optional: padding around the grid */
+  margin: 20px;
   justify-items: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
 }

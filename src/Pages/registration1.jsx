@@ -10,9 +10,9 @@ export function Registration1() {
                 <AppBar index={0} activeSteps = {1}/>
                 <ul className='instructions'>Introduceți actul de identitate în interiorul dispozitivului</ul>
                 <ul class='center'><AnimationSquare /></ul>
-                <ul><Link to="/registration2">
+                <Link to="/registration2">
                     <Button text="Continuă" />
-                </Link></ul>
+                </Link>
             </ul>
         </div>
     );

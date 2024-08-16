@@ -7,10 +7,15 @@
     border: none; /* Remove default border */
     border-radius: 25px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
-    font-size: 38px; /* Font size */
+    font-size: 47px; /* Font size */
     cursor: pointer; /* Pointer on hover */
     font-family: 'Roboto', sans-serif; 
     font-weight: bold; /* Bold text */
     transition: transform 0.1s ease-in-out; /* Transition for hover effect */
-    margin-top: 25px;
+    margin: 25px auto 50px auto;
+}
+
+/* Optional: Add hover effect */
+#main-button:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }

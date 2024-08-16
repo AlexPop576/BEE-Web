@@ -17,6 +17,12 @@ export default function SignatureBox() {
     };
 
     useEffect(() => {
+        const canvas = canvasRef.current;
+        const context = canvas.getContext('2d');
+        context.strokeStyle = '#000'; // Set the stroke color
+        context.lineWidth = 30; // Set the line width (increase this value for a thicker line)
+        context.lineCap = 'round';
+
         resizeCanvas(); // Initial canvas sizing
 
         // Add event listener for window resize

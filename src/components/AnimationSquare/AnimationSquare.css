@@ -7,3 +7,23 @@
     align-items: center;
     border-radius: 25px; /* Optional: if you want rounded corners */
 }
+
+.video-container {
+    position: relative;
+    width: 1000px;
+    height: 600px; /* Full viewport height */
+    overflow: hidden; /* Ensure the video does not overflow */
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+  
+  .video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the container */
+    margin: auto;
+  }

@@ -8,9 +8,9 @@ export function Registration2() {
             <ul>
             <AppBar index={1} activeSteps = {2}/>
                 <ul className='instructions'>Daca acesta nu este CNP-ul corect, apasați pe butonul de asistență</ul>
-                <ul><Link to="/registration3">
+                <Link to="/registration3">
                     <Button text="Continuă" />
-                </Link></ul>
+                </Link>
             </ul>
         </div>
     );

@@ -8,7 +8,7 @@ export function Vote2() {
     return (
         <div className="App">
             <ProgressBar activeSteps = {5}/>
-            <VoteTile/>
+            <VoteTile type={2}/>
             <p className="instructions" id="vote2">Confirmă votul prin semnătură</p>
             <SignatureBox/>
             <Link to="/final">
