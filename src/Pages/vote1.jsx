@@ -8,12 +8,12 @@ export function Vote1() {
         <div className="App">
             <ProgressBar activeSteps = {4}/>
             <div className='grid-container'>
-                <VoteTile/>
-                <VoteTile/>
-                <VoteTile/>
-                <VoteTile/>
-                <VoteTile/>
-                <VoteTile/>
+                <VoteTile party="Partidul Social Democrat" name="Ion"/>
+                <VoteTile party="Partidul Social Democrat" name="Ion"/>
+                <VoteTile party="Partidul Social Democrat" name="Ion"/>
+                <VoteTile party="Partidul Social Democrat" name="Ion"/>
+                <VoteTile party="Partidul Social Democrat" name="Ion"/>
+                <VoteTile party="Partidul Social Democrat" name="Ion"/>
             </div>
             <Link to="/vote2">
                 <Button text = "Continuă"/>

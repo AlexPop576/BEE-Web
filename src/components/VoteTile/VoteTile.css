@@ -3,24 +3,52 @@
     height: 250px;
     background-color: #FFFFFF;
     display: flex;
-    justify-content: center;
     align-items: center;
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.logo {
+    width: 230px;
+    height: 230px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+
+.party-info-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.party-info {
+    text-align: center;
 }
 
 #party {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 40px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    font-size: 50px;
+    margin: 10;
 }
 
 #name {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
-    font-size: 25px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    font-size: 30px;
+    margin: 0;
+}
+
+.divider {
+    width: 3px;
+    background-color: #ccc;
+    height: 95%;
+    margin: 0 10px;
 }
