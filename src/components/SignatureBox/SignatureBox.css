@@ -1,0 +1,16 @@
+.signature-box {
+    width: calc(100vw - 60px);
+    height: 250px;
+    margin: 30s;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    cursor: crosshair; /* Change cursor to crosshair for drawing */
+}

@@ -12,6 +12,5 @@
     font-family: 'Roboto', sans-serif; 
     font-weight: bold; /* Bold text */
     transition: transform 0.1s ease-in-out; /* Transition for hover effect */
-    margin-bottom: 50px;
     margin-top: 25px;
 }
