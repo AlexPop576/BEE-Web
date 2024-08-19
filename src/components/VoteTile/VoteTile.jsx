@@ -2,29 +2,33 @@ import './VoteTile.css'
 import logoPNL from '../../assets/pnl.png'
 
 export default function VoteTile(props) {
-    if(props.type==1)
+    const isSeleced = props.selectedTile == props.selectedKey ? 'selected' : 'not-selected';
+    
+    if (props.type === 1)
         return (
-            <div class="vote-tile">
-                <img className="logo" src={logoPNL} alt='logo'/>
-                <div class="divider"></div>
-                <div class="party-info-container">
-                <div class="party-info">
-                    <h2 id="party">Partidul Național Liberal</h2>
-                    <p id="name">Adrian Mateo</p>
+            <button id = "tile-button" onClick={props.onClick}>
+                <div class={isSeleced}>
+                    <img className="logo" src={logoPNL} alt='logo' />
+                    <div class="divider"></div>
+                    <div class="party-info-container">
+                        <div class="party-info">
+                            <h2 id="party">{props.party}</h2>
+                            <p id="name">{props.name}</p>
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
+            </button>
         );
-    else if(props.type==2)
+    else if (props.type === 2)
         return (
-            <div class="vote-tile large">
-                <img className="logo" src={logoPNL} alt='logo'/>
+            <div class="not-selected large">
+                <img className="logo" src={logoPNL} alt='logo' />
                 <div class="divider"></div>
                 <div class="party-info-container">
-                <div class="party-info">
-                    <h2 id="party">Partidul Național Liberal</h2>
-                    <p id="name">Adrian Mateo</p>
-                </div>
+                    <div class="party-info">
+                        <h2 id="party">Partidul Național Liberal</h2>
+                        <p id="name">Adrian Mateo</p>
+                    </div>
                 </div>
             </div>
         );

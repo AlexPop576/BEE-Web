@@ -1,4 +1,18 @@
-.vote-tile {
+.selected {
+    visibility: visible;
+    width: 47vw;
+    height: 250px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border: 5px solid #FFD700;
+}
+
+.not-selected {
+    visibility: visible;
     width: 47vw;
     height: 250px;
     background-color: #FFFFFF;
@@ -59,4 +73,8 @@
     background-color: #ccc;
     height: 95%;
     margin: 0 10px;
+}
+
+#tile-button {
+    visibility: hidden;
 }

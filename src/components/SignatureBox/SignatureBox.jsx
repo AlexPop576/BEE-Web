@@ -9,7 +9,6 @@ export default function SignatureBox() {
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
         const width = window.innerWidth - 90; // Calculate width based on viewport
-        const height = canvas.height; // Maintain the existing height
 
         canvas.width = width;
         context.canvas.width = width; // Ensure the drawing context also updates with the new width

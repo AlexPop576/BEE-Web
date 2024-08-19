@@ -33,6 +33,7 @@ const CameraFeed = () => {
   return (
     <div className="camera-feed-container">
       <video ref={videoRef} autoPlay playsInline className="camera-feed" />
+      <p>Please turn on your camera</p>
     </div>
   );
 };
