@@ -8,7 +8,7 @@ import { Vote1 } from './Pages/vote1';
 import { Vote2 } from './Pages/vote2';
 import { Final } from './Pages/final';
 
-export let partyList = [{ party: "Partidul Social Democrat", name: "Ion" }, { party: "Partidul Național Liberal", name: "Adrian Mateo" }, { party: "Uniunea Salvați România", name: "Silvestru Anton" }]
+export let partyList = [{ party: "Partidul Social Democrat", name: "Ion" }, { party: "Partidul Național Liberal", name: "Adrian Mateo" }, { party: "Uniunea Salvați România", name: "Silvestru Anton" }, { party: "URSS", name: "Alex" }, { party: "DPIT", name: "Cretu Andrei" }, { party: "DPIT", name: "Todea Irina" }, { party: "DPIT", name: "Bara Mihai" }, { party: "DPIT", name: "Gruescu Andreea" }, { party: "DPIT", name: "Radu Cristian" }]
 
 function App() {
 

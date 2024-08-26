@@ -1,6 +1,6 @@
 .selected {
     visibility: visible;
-    width: 47vw;
+    width: 44vw;
     height: 250px;
     background-color: #FFFFFF;
     display: flex;
@@ -8,12 +8,12 @@
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    border: 5px solid #FFD700;
+    border: 7px solid #FFD700;
 }
 
 .not-selected {
     visibility: visible;
-    width: 47vw;
+    width: 44vw;
     height: 250px;
     background-color: #FFFFFF;
     display: flex;
@@ -21,6 +21,7 @@
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    border: 7px solid white;
 }
 
 .large {

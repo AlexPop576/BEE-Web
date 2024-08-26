@@ -1,39 +1,44 @@
-import './LiveFeed.css'
-import React, { useEffect, useRef } from 'react';
+import './LiveFeed.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const CameraFeed = () => {
-  const videoRef = useRef(null);
+  const [imageSrc, setImageSrc] = useState('');
+  const refreshInterval = 33; // Refresh interval in milliseconds for ~30 fps
 
   useEffect(() => {
-    const startVideo = async () => {
+    const startCamera =  () => {
       try {
-        // Request access to the user's camera
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        if (videoRef.current) {
-          // Assign the stream to the video element
-          videoRef.current.srcObject = stream;
+        axios.get('http://localhost:5000/start-camera', { responseType: 'blob' });
+      } catch (err) {
+        console.error("Error starting image:", err);
+      }
+    };
+
+
+    const fetchImage = async () => {
+      try {
+        const response2 = await axios.get('http://localhost:5000/image', { responseType: 'blob' });
+        if (response2.status === 200) {
+          setImageSrc(URL.createObjectURL(response2.data));
+        } else {
+          console.error("Error fetching image:", response2.statusText);
         }
       } catch (err) {
-        console.error("Error accessing camera:", err);
+        console.error("Error fetching image:", err);
       }
     };
 
-    startVideo();
+    startCamera();
+    fetchImage(); // Fetch image initially
+    const intervalId = setInterval(fetchImage, refreshInterval); // Fetch image periodically
 
-    // Clean up the video stream on component unmount
-    return () => {
-      if (videoRef.current && videoRef.current.srcObject) {
-        const stream = videoRef.current.srcObject;
-        const tracks = stream.getTracks();
-        tracks.forEach(track => track.stop());
-      }
-    };
+    return () => clearInterval(intervalId); // Clean up the interval on component unmount
   }, []);
 
   return (
     <div className="camera-feed-container">
-      <video ref={videoRef} autoPlay playsInline className="camera-feed" />
-      <p>Please turn on your camera</p>
+      <img src={imageSrc} alt="Live Feed" className="camera-feed" />
     </div>
   );
 };

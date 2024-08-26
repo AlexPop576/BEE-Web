@@ -1,13 +1,18 @@
+// Vote1.js
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../components/Button/Button.jsx'
+import Button from '../components/Button/Button.jsx';
 import ProgressBar from '../components/ProgressBar/ProgressBar.jsx';
 import VoteTile from '../components/VoteTile/VoteTile.jsx';
-import React, { useState } from 'react';
-import {partyList} from '../App.js'
+import { partyList } from '../App.js';
 
 export function Vote1() {
-    let [selectedTile, setSelectedTile] = useState(-1);
-    const handleClick = (index) => {setSelectedTile(selectedTile = index)};
+    const [selectedTile, setSelectedTile] = React.useState(-1);
+
+    const handleClick = (index) => {
+        setSelectedTile(index);
+        localStorage.setItem('selectedTile', index); // Store value in local storage
+    };
 
     return (
         <div className="App">
@@ -18,13 +23,12 @@ export function Vote1() {
                         key={index}
                         party={item.party}
                         name={item.name}
-                        onClick = {() => {handleClick(index)}}
+                        onClick={() => handleClick(index)}
                         type={1}
-                        selectedKey = {index}
-                        selectedTile = {selectedTile}
+                        selectedKey={index}
+                        selectedTile={selectedTile}
                     />
                 ))}
-                <p>{selectedTile}</p>
             </div>
             <Link to="/vote2">
                 <Button text="Continuă" />
