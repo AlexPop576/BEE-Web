@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Button from '../components/Button/Button.jsx'
-import ProgressBar from '../components/ProgressBar/ProgressBar.jsx';
+import AppBar from '../components/AppBar/AppBar.jsx';
 import SignatureBox from '../components/SignatureBox/SignatureBox.jsx';
 import VoteTile from '../components/VoteTile/VoteTile.jsx'
 import { partyList } from '../App.js'
@@ -41,16 +41,16 @@ export function Vote2() {
         }
     };
 
-
     return (
         <div className="App">
-            <ProgressBar activeSteps={5} />
-            {cnp}
+            <AppBar index={4} activeSteps = {5}/>
+            <p className="instructions" id="vote2">Confirmă votul</p>
             <VoteTile
                 party={partyList[selectedTile].party}
                 name={partyList[selectedTile].name}
+                selectedTile={selectedTile}
                 type={2} />
-            <p className="instructions" id="vote2">Confirmă votul prin semnătură</p>
+            <p className="instructions" id="vote2">Semnătură</p>
             <SignatureBox />
             <Link to="/final">
                 <Button text="Continuă" onClick={() => { sendVote(selectedTile, partyList, cnp) }} />

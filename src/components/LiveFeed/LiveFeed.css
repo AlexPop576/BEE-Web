@@ -1,20 +1,29 @@
 .camera-feed-container {
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    width: 1000px;
-    height: 600px; /* Full viewport height */
-    overflow: hidden; /* Ensure the video does not overflow */
-    border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: auto;
-    background-color: white;
-  }
-  
-  .camera-feed {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the video covers the container */
-    margin: auto;
-  }
-  
+  position: relative; /* Make sure the container is relative for absolute positioning */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  width: 60vw;
+  height: 600px; /* Full viewport height */
+  overflow: hidden; /* Ensure the video does not overflow */
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0px auto 20px auto;
+  background-color: white;
+}
+
+.camera-feed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the container */
+}
+
+.saved-image {
+  position: absolute; /* Absolute positioning within the container */
+  bottom: 10px; /* Adjust as needed for spacing from the bottom */
+  right: 10px; /* Adjust as needed for spacing from the right */
+  width: 250px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: rounded corners */
+  border-radius: 15px;
+}

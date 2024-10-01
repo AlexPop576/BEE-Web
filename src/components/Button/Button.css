@@ -1,21 +1,29 @@
-#main-button {
-    width: 55vw;
-    height: 9vh;
+.main-button {
+    width: 60vw;
+    height: 120x;
     background-color: #FFD700; /* Yellow color */
     color: white; /* White text */
     padding: 15px 270px; /* Padding inside the button */
     border: none; /* Remove default border */
     border-radius: 25px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
-    font-size: 47px; /* Font size */
+    font-size: 55px; /* Font size */
     cursor: pointer; /* Pointer on hover */
     font-family: 'Roboto', sans-serif; 
     font-weight: bold; /* Bold text */
     transition: transform 0.1s ease-in-out; /* Transition for hover effect */
-    margin: 25px auto 50px auto;
+    margin: 0px auto 20px auto;
 }
 
 /* Optional: Add hover effect */
 #main-button:hover {
     transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+#not-active {
+    background-color: grey; /* Yellow color */
+}
+
+#active {
+    background-color: #FFD700; /* Yellow color */
 }

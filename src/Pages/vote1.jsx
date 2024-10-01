@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button/Button.jsx';
-import ProgressBar from '../components/ProgressBar/ProgressBar.jsx';
+import AppBar from '../components/AppBar/AppBar.jsx';
 import VoteTile from '../components/VoteTile/VoteTile.jsx';
 import { partyList } from '../App.js';
 
@@ -16,7 +16,8 @@ export function Vote1() {
 
     return (
         <div className="App">
-            <ProgressBar activeSteps={4} />
+            <AppBar index={3} activeSteps = {4}/>
+            <p className='instructions'>Selectare candidat</p>
             <div className='grid-container'>
                 {partyList.map((item, index) => (
                     <VoteTile

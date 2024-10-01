@@ -6,14 +6,12 @@ import AppBar from '../components/AppBar/AppBar.jsx';
 export function Registration1() {
     return (
         <div className="App">
-            <ul>
                 <AppBar index={0} activeSteps = {1}/>
-                <ul className='instructions'>Introduceți actul de identitate în interiorul dispozitivului</ul>
-                <ul class='center'><AnimationSquare /></ul>
+                <p className='instructions'>Introduceți actul de identitate în interiorul dispozitivului</p>
+                <div class='center'><AnimationSquare /></div>
                 <Link to="/registration2">
                     <Button text="Continuă" />
                 </Link>
-            </ul>
         </div>
     );
 }

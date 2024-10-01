@@ -6,14 +6,19 @@
   }
   
   .appbar-button {
-    font-size: 20px;
+    font-size: 30px;
     background: none;
     border: none;
     cursor: pointer;
     color: #666; /* Light grey for the buttons */
-    padding: 15px;
+    padding: 15px 30px 0px 30px;
   }
   
   .back-button:hover, .help-button:hover {
     color: #000; /* Darker color on hover */
+  }
+
+  .button-image {
+    width: 60px;
+    height: 60px;
   }

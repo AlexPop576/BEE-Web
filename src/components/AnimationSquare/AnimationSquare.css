@@ -1,5 +1,5 @@
 #square-container {
-    width: 1000px;  /* Set the width to your desired size */
+    width: 60vw;  /* Set the width to your desired size */
     height: 600px; /* Set the height to the same value as the width */
     background-color: #d3d3d3; /* Assuming the background color is light grey */
     display: flex;
@@ -10,12 +10,14 @@
 
 .video-container {
     position: relative;
-    width: 1000px;
+    width: 60vw;
     height: 600px; /* Full viewport height */
     overflow: hidden; /* Ensure the video does not overflow */
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: auto;
+    justify-content: center;
+    align-items: center;
   }
   
   .video-player {

@@ -1,6 +1,10 @@
 body {
   background-color: #F2F5FF;
-  margin: 0,
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0; /* For Chrome, Safari, and Opera */
 }
 
 .App {
@@ -16,13 +20,21 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: bold; /* or 700 since Roboto 700 is bold */
   font-size: 40px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 40px;
 }
 
 #vote2 {
   margin: 30px;
   text-align: left;
+}
+
+#lottie-animation {
+   margin-top: 100px;
+}
+
+#final-spacing {
+  margin-bottom: 260px;
 }
 
 .center {
@@ -52,6 +64,21 @@ body {
   margin: 20px;
   justify-items: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
+}
+
+#help-page {
+  margin-top: 130px;
+  margin-bottom: 100px;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Optional: if you want the div to take full height */
+}
+
+.large {
+  font-size: 60px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

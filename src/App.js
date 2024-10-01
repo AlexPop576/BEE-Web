@@ -7,8 +7,9 @@ import { Registration3 } from './Pages/registration3';
 import { Vote1 } from './Pages/vote1';
 import { Vote2 } from './Pages/vote2';
 import { Final } from './Pages/final';
+import { Help } from './Pages/help';
 
-export let partyList = [{ party: "Partidul Social Democrat", name: "Ion" }, { party: "Partidul Național Liberal", name: "Adrian Mateo" }, { party: "Uniunea Salvați România", name: "Silvestru Anton" }, { party: "URSS", name: "Alex" }, { party: "DPIT", name: "Cretu Andrei" }, { party: "DPIT", name: "Todea Irina" }, { party: "DPIT", name: "Bara Mihai" }, { party: "DPIT", name: "Gruescu Andreea" }, { party: "DPIT", name: "Radu Cristian" }]
+export let partyList = [{ party: "Partidul Poporului", name: "Agamemnon Dandanache" },{ party: "Aurora Economică Română", name: "Nae Cațavencu" }, { party: "Partidului Progresului", name: "Tase Fandoseanu" }, { party: "Liga Sincerității și Adevărului", name: "Ionel Buimăceanu" }, { party: "Coaliția pentru Unire și Învârtire", name: "Ștefan Pleșuvanu" }, { party: "Asociația Vorbelor fară Fapte", name: "Fane Cotcodac" }]
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path = "/vote1" element = {<Vote1/>}/>
         <Route path = "/vote2" element = {<Vote2/>}/>
         <Route path = "/final" element = {<Final/>}/>
+        <Route path = "/help" element = {<Help/>}/>
       </Routes>
     </Router>
   );

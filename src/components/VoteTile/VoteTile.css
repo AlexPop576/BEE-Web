@@ -1,6 +1,6 @@
 .selected {
     visibility: visible;
-    width: 44vw;
+    width: 45vw;
     height: 250px;
     background-color: #FFFFFF;
     display: flex;
@@ -13,7 +13,7 @@
 
 .not-selected {
     visibility: visible;
-    width: 44vw;
+    width: 45vw;
     height: 250px;
     background-color: #FFFFFF;
     display: flex;
