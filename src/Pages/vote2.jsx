@@ -11,6 +11,8 @@ export function Vote2() {
     let [selectedTile, setSelectedTile] = React.useState(0);
     let [cnp, setCnp] = React.useState(0);
 
+    let [serverMessage, setServerMessage] = React.useState(null);
+
     useEffect(() => {
         const storedTile = localStorage.getItem('selectedTile');
         if (storedTile !== null) {
@@ -39,6 +41,35 @@ export function Vote2() {
         } catch (error) {
             console.error('Error sending data:', error);
         }
+
+        let txnStatus = false;
+        let myServerMessage = null;
+        try {
+            const data = JSON.stringify({ cnp: cnp, party: voteParty, name: voteName});
+
+            const response = await axios.post('http://localhost:5001/sendTransaction', data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            }).then(res => {
+                console.log('TXN Response from server:', res.data);
+                txnStatus = res.data.status;
+                myServerMessage = res.data.message;
+                setServerMessage(res.data.message);
+            }) 
+
+
+        } catch (error) {
+            console.error('Error sending txn data:', error);
+        }
+
+        
+        if(txnStatus === true) {
+            document.location = "/#/final";
+        } else {
+            alert(myServerMessage)
+        }
+
     };
 
     return (
@@ -52,9 +83,11 @@ export function Vote2() {
                 type={2} />
             <p className="instructions" id="vote2">Semnătură</p>
             <SignatureBox />
-            <Link to="/final">
-                <Button text="Continuă" onClick={() => { sendVote(selectedTile, partyList, cnp) }} />
-            </Link>
+            {/* {serverMessage !== null ? <>{serverMessage}</>: <></> }   */}
+
+            {/* <Link to="/final"> */}
+            <Button text="Continuă" onClick={() => { sendVote(selectedTile, partyList, cnp) }} />
+            {/* </Link> */}
         </div>
     );
 }
