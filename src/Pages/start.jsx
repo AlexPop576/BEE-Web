@@ -14,9 +14,7 @@ export function Start() {
     <div className="App">
       <div className="background-image"></div>
       <Header />
-      <Link to="/registration1">
-        <Button id='start-button' text="Start" onClick={onStart} />
-      </Link>
+      <Button id='start-button' active={1} text="Start" onClick={onStart} page={"/registration1"}/>
     </div>
   );
 }

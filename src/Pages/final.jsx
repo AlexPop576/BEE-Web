@@ -18,9 +18,7 @@ export function Final() {
         <div className="App">
             <Lottie options={defaultOptions} height={500} width={500} id='lottie-animation'/>
             <p className = "instructions" id='final-spacing'>Votul a fost înregistrat cu succes!</p>
-            <Link to="/">
-                <Button text = "Finalizare"/>
-            </Link>
+            <Button text="Continuă" active={1} page="/"/>
         </div>
     );
 }

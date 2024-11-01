@@ -8,10 +8,12 @@ import { partyList } from '../App.js';
 
 export function Vote1() {
     const [selectedTile, setSelectedTile] = React.useState(-1);
+    const [isActive, setIsActive] = React.useState(0);
 
     const handleClick = (index) => {
         setSelectedTile(index);
         localStorage.setItem('selectedTile', index); // Store value in local storage
+        setIsActive(1);
     };
 
     return (
@@ -31,9 +33,7 @@ export function Vote1() {
                     />
                 ))}
             </div>
-            <Link to="/vote2">
-                <Button text="Continuă" />
-            </Link>
+            <Button text="Continuă" active={isActive} onClick={setIsActive} page="/vote2"/>
         </div>
     );
 }

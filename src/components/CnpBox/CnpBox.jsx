@@ -2,7 +2,7 @@ import './CnpBox.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
-export default function CnpBox() {
+export default function CnpBox(props) {
   const [capturedText, setCapturedText] = useState(''); // State to hold the captured text
 
   const fetchCapturedText = async () => {
@@ -12,6 +12,7 @@ export default function CnpBox() {
       setCapturedText(text); // Update state with captured text
       localStorage.setItem('cnp', text+'123'); // Store the captured text in localStorage
       console.log('fetch');
+      props.event(1);
     } catch (error) {
       console.error('Error fetching captured text:', error);
       setCapturedText('Failed to fetch text'); // Update state in case of error

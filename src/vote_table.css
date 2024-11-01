@@ -1,0 +1,98 @@
+/* Ensure full height for html and body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background color for the entire page */
+.vote-background {
+    background-color: #FFD700; /* Gold-like yellow */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    padding: 20px; /* Add padding to reduce the space on the sides */
+}
+
+/* Style for the 'Statistici vot' text */
+#statistici-vot {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center; /* Center the text */
+}
+
+/* Flex container for the table and charts */
+.flex-container {
+    display: flex;
+    width: 100%;
+    max-width: 2000px; /* Limit max width for responsiveness */
+    align-items: flex-start; /* Align items to the start without stretching */
+}
+
+/* Center the table and add margin */
+#table-color {
+    background-color: white; /* White background for the table */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 40%; /* 2/5 width */
+    margin-right: 20px; /* Space between table and charts */
+    padding: 20px; /* Padding at the bottom to separate from charts */
+    align-self: center; /* Center the table vertically within the flex container */
+    border-radius: 2%;
+}
+
+/* Style for the charts container */
+.charts-container {
+    border-radius: 2%;
+    width: 55%; /* 3/5 width */
+    background-color: white; /* White background for charts */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px; /* Padding around the charts */
+    display: flex;
+    flex-direction: column; /* Stack charts vertically */
+}
+
+/* Style for individual chart containers */
+.chart {
+    margin-bottom: 100px; /* Increased space between charts */
+    height: auto; /* Allow height to adjust based on content */
+    max-height: 350px; /* Limit the maximum height of the charts */
+    width: 100%; /* Full width of the charts container */
+}
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 28px; /* Larger text size */
+    border: 3px solid black; /* Thicker black border */
+}
+
+/* Style for the table headers */
+th {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    border: 3px solid black;
+}
+
+/* Style for table cells */
+td {
+    padding: 20px;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* Add a hover effect for table rows */
+tr:hover {
+    background-color: #f9f9f9;
+}

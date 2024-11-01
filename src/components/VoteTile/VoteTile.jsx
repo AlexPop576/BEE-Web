@@ -1,5 +1,4 @@
 import './VoteTile.css'
-import logoPNL from '../../assets/pnl.png'
 import PP from '../../assets/Partidul Poporului.png'
 import AE from '../../assets/Aurora Economica.png'
 import PPR from '../../assets/Partidul Progresului.png'

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './SignatureBox.css';
 
-export default function SignatureBox() {
+export default function SignatureBox(props) {
     const canvasRef = useRef(null);
     const [isDrawing, setIsDrawing] = useState(false);
     const [hasDrawn, setHasDrawn] = useState(false); // Track if the user has drawn anything
@@ -49,7 +49,7 @@ export default function SignatureBox() {
         setHasDrawn(true); // User has started drawing, so placeholder should disappear
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
-
+        props.event(1);
         if (!hasDrawn) {
             context.clearRect(0, 0, canvas.width, canvas.height); // Clear the placeholder text
         }

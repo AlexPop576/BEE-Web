@@ -9,6 +9,8 @@ export default function AppBar(props) {
     const [waitingForButton, setWaitingForButton] = useState(false);
     const navigate = useNavigate();
 
+    let nav = props.activeSteps === 2 ? "/helpkeyboard" : "/help";
+
     const BackButtonList = ["/", "/registration1", "/registration2", "/registration3", "/vote1"];
 
     const handleHelpButtonClick = async () => {
@@ -67,7 +69,7 @@ export default function AppBar(props) {
                 </button>
             </Link>
             <ProgressBar activeSteps={props.activeSteps} />
-            <Link to={"/help"}>
+            <Link to={nav}>
             <button className="appbar-button" onClick={handleHelpButtonClick} disabled={waitingForButton}>
                 <img src={HelpButton} alt="Help" className='button-image'/>
             </button></Link>

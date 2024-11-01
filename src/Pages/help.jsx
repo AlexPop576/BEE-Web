@@ -40,6 +40,15 @@ export function Help() {
         startListening();
     }, []);
 
+    // Automatically navigate to /vote1 after 6 seconds
+    useEffect(() => {
+        const timerId = setTimeout(() => {
+            navigate('/vote1');
+        }, 6000);
+
+        return () => clearTimeout(timerId); // Cleanup timer on component unmount
+    }, [navigate]);
+
     const defaultOptions = {
         loop: true,
         autoplay: true,

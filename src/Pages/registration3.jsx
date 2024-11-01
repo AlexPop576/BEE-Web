@@ -14,28 +14,15 @@ export function Registration3() {
         }
       };
 
-    let activeButton = 1;
-
-    const MyButton = ({ active }) => {
-      return (
-          <>
-              {active === 1 ? (
-                  <Button text="Continuă" onClick={stopCamera} active={1} />
-              ) : (
-                  <Link to="/vote1">
-                      <Button text="Continuă" onClick={stopCamera} active={0} />
-                  </Link>
-              )}
-          </>
-      );
-  };
+    
 
     return (
         <div className="App">
                <AppBar index={2} activeSteps = {3}/>
                 <p className='instructions'>Verificare identitate</p>
                 <LiveFeed/>
-                <MyButton active={0}/>
+                
         </div>
     );
+    //<Button text="Continuă" active={1} page="/vote1"/>
 }
